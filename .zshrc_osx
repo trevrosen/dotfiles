@@ -1,16 +1,21 @@
-# Path to your oh-my-zsh configuration.
+#
+#
+# (OS X only)
+#
+# Path oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="burlyscudd"
 
 export PATH=~/bin/:$PATH
 
-# Colorized ls
-alias ls="ls -Glh"
+# Nice ls
+alias ls="ls -Galh"
 alias l="ls -Glh"
 
 # Show the human-friendly size for every item in the pwd
 alias lssize='du -sck * | sort -n | while read size fname; do for unit in k M G T P E Z Y; do if [ $size -lt 1024 ]; then echo -e "${size}${unit}\t${fname}"; break; fi; size=$((size/1024)); done; done'
 
+# Editor functions
 export EDITOR="mvim"
 export GIT_EDITOR='mvim -f --nomru -c "au VimLeave * !open -a iTerm2"'
 alias m="mvim --remote-silent"
