@@ -12,6 +12,10 @@ alias l="ls -Glh"
 # Show the human-friendly size for every item in the pwd
 alias lssize='du -sck * | sort -n | while read size fname; do for unit in k M G T P E Z Y; do if [ $size -lt 1024 ]; then echo -e "${size}${unit}\t${fname}"; break; fi; size=$((size/1024)); done; done'
 
+# Go(lang) Environment
+export GOPATH="$HOME/Code/go"
+PATH="$PATH:$GOPATH/bin"
+
 # Editor functions
 export EDITOR="mvim"
 export GIT_EDITOR='mvim -f --nomru -c "au VimLeave * !open -a iTerm2"'
