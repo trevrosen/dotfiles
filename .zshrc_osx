@@ -13,8 +13,11 @@ alias l="ls -Glh"
 alias lssize='du -sck * | sort -n | while read size fname; do for unit in k M G T P E Z Y; do if [ $size -lt 1024 ]; then echo -e "${size}${unit}\t${fname}"; break; fi; size=$((size/1024)); done; done'
 
 # Go(lang) Environment
-export GOPATH="$HOME/Code/go"
+export GOPATH=$HOME/Code/go
 PATH="$PATH:$GOPATH/bin"
+
+export GOROOT=`go env GOROOT` # b/c installed via Homebrew 
+export PATH=$PATH:$GOROOT/bin
 
 # Editor functions
 export EDITOR="mvim"
