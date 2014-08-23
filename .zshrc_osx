@@ -14,7 +14,7 @@ alias lssize='du -sck * | sort -n | while read size fname; do for unit in k M G 
 
 # Go(lang) Environment
 export GOPATH=$HOME/Code/go
-PATH="$PATH:$GOPATH/bin"
+export PATH=$PATH:$GOPATH/bin
 
 export GOROOT=`go env GOROOT` # b/c installed via Homebrew 
 export PATH=$PATH:$GOROOT/bin
@@ -30,6 +30,7 @@ alias scrum="m ~/.scrumlog.txt"
 
 
 # ------- Git ------------------
+alias gcommit="git commit -S"
 alias gl="git log --color --graph --decorate"
 alias gp="git push"
 alias gc="git checkout"
