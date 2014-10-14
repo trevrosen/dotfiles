@@ -27,6 +27,7 @@ alias m="mvim --remote-silent"
 # Laziness
 alias pingoo="ping google.com"
 alias scrum="m ~/.scrumlog.txt"
+alias msfup="cd $HOME/Code/metasploit-framework && git fetch upstream && gc master && git merge upstream/master"
 
 
 # ------- Git ------------------
