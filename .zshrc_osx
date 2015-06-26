@@ -20,7 +20,9 @@ export GOROOT=`go env GOROOT` # b/c installed via Homebrew
 export PATH=$PATH:$GOROOT/bin
 
 # Docker stuff
-eval "$(boot2docker shellinit)" # ensure proper Docker shell env
+export DOCKER_TLS_VERIFY=1
+export DOCKER_HOST=tcp://`boot2docker ip`:2376
+export DOCKER_CERT_PATH=/Users/`whoami`/.boot2docker/certs/boot2docker-vm
 
 # Editor functions
 export EDITOR="mvim"
