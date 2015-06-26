@@ -19,6 +19,9 @@ export PATH=$PATH:$GOPATH/bin
 export GOROOT=`go env GOROOT` # b/c installed via Homebrew 
 export PATH=$PATH:$GOROOT/bin
 
+# Docker stuff
+eval "$(boot2docker shellinit)" # ensure proper Docker shell env
+
 # Editor functions
 export EDITOR="mvim"
 export GIT_EDITOR='mvim -f --nomru -c "au VimLeave * !open -a iTerm2"'
