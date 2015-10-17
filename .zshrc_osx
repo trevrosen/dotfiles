@@ -12,12 +12,36 @@ alias l="ls -Glh"
 # Show the human-friendly size for every item in the pwd
 alias lssize='du -sck * | sort -n | while read size fname; do for unit in k M G T P E Z Y; do if [ $size -lt 1024 ]; then echo -e "${size}${unit}\t${fname}"; break; fi; size=$((size/1024)); done; done'
 
-# Go(lang) Environment
+# --Go--
+#
+# -------Environment------
 export GOPATH=$HOME/Code/go
 export PATH=$PATH:$GOPATH/bin
 
-export GOROOT=`go env GOROOT` # b/c installed via Homebrew 
+export GOROOT=`go env GOROOT` # b/c installed via Homebrew
 export PATH=$PATH:$GOROOT/bin
+
+#
+# -------Convenience------
+#
+# Set up a Go project for contribution. This setup gets around issues related to intra-package import paths
+# $1 - the origin of the package, e.g. "github.com/spf13/hugo"
+# $2 - the name of the package in the fork, e.g. "hugo"
+gohack (){
+	echo "[-] Getting package $1"
+	go get $1
+	cd $GOPATH/src/$1
+	echo "[-] Creating fork environment for $2"
+	git remote rename origin upstream
+	git remote add origin git@github.com:trevrosen/$2
+  git fetch --all
+	echo "[-] Setting up master"
+  git branch master --set-upstream-to origin/master
+	git checkout master
+	git checkout -b upstream-master --track upstream/master
+	echo "[-] Done!"
+	popd
+}
 
 # Docker stuff
 export DOCKER_TLS_VERIFY=1
@@ -36,6 +60,7 @@ alias scrum="m ~/.scrumlog.txt"
 # Metasploit stuff
 alias msfup="cd $HOME/Code/metasploit-framework && git fetch upstream && gc master && git merge upstream/master"
 alias msfconsole_debug="rdebug-ide --port 1234 --dispatcher-port 26162 -- $HOME/Code/metasploit-framework/msfconsole"
+
 
 
 # ------- Git ------------------
