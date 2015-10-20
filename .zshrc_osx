@@ -15,7 +15,7 @@ alias lssize='du -sck * | sort -n | while read size fname; do for unit in k M G 
 # --Go--
 #
 # -------Environment------
-export GOPATH=$HOME/Code/go
+export GOPATH=$HOME/Dropbox/Code/go
 export PATH=$PATH:$GOPATH/bin
 
 export GOROOT=`go env GOROOT` # b/c installed via Homebrew
@@ -36,19 +36,15 @@ gohack (){
 	echo "[-] Creating fork environment for $2"
 	git remote rename origin upstream
 	git remote add origin git@github.com:$GITHUB_USERNAME/$2
-  git fetch --all
+	git fetch --all
 	echo "[-] Setting up master"
-  git branch master --set-upstream-to origin/master
+	git branch master --set-upstream-to origin/master
 	git checkout master
 	git checkout -b upstream-master --track upstream/master
 	echo "[-] Done!"
 	popd
 }
 
-# Docker stuff
-export DOCKER_TLS_VERIFY=1
-export DOCKER_HOST=tcp://`boot2docker ip`:2376
-export DOCKER_CERT_PATH=/Users/`whoami`/.boot2docker/certs/boot2docker-vm
 
 # Editor functions
 export EDITOR="mvim"
