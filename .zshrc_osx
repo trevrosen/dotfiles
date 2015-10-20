@@ -27,13 +27,15 @@ export PATH=$PATH:$GOROOT/bin
 # Set up a Go project for contribution. This setup gets around issues related to intra-package import paths
 # $1 - the origin of the package, e.g. "github.com/spf13/hugo"
 # $2 - the name of the package in the fork, e.g. "hugo"
+#
+export GITHUB_USERNAME="trevrosen"
 gohack (){
 	echo "[-] Getting package $1"
 	go get $1
 	cd $GOPATH/src/$1
 	echo "[-] Creating fork environment for $2"
 	git remote rename origin upstream
-	git remote add origin git@github.com:trevrosen/$2
+	git remote add origin git@github.com:$GITHUB_USERNAME/$2
   git fetch --all
 	echo "[-] Setting up master"
   git branch master --set-upstream-to origin/master
