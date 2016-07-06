@@ -69,3 +69,11 @@ alias gd="git diff"
 alias gs="git status"
 alias gpr="git pull --rebase"
 alias gcommit="git commit -a -S"
+
+# -- Zsh working like Vi --
+# ((remember to set up the vi-mode in the plugins line in ~/.zshrc))
+# ctrl-r starts searching history backward
+bindkey '^r' history-incremental-search-backward
+
+# Drop the timeout for switching between modes
+export KEYTIMEOUT=1
