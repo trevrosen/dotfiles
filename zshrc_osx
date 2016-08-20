@@ -15,7 +15,7 @@ alias lssize='du -sck * | sort -n | while read size fname; do for unit in k M G 
 export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:"${PATH}"
 
 # --Go--
-export GOPATH=$HOME/Dropbox/Code/go
+export GOPATH=$HOME/LocalCode/go
 export PATH=$PATH:$GOPATH/bin
 
 export GOROOT=`go env GOROOT` # b/c installed via Homebrew
