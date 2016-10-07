@@ -26,6 +26,7 @@ export PATH=$PATH:$GOROOT/bin
 # $1 - the origin of the package, e.g. "github.com/spf13/hugo"
 # $2 - the name of the package in the fork, e.g. "hugo"
 #
+# usage: gohack github.com/pressly/goose goose
 export GITHUB_USERNAME="trevrosen"
 gohack (){
 	echo "[-] Getting package $1"

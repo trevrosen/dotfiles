@@ -1,0 +1,5 @@
+--ignore-dir=log
+--ignore-dir=tmp
+--ignore-dir=.idea
+--ignore-dir=vendor
+--sort-files
