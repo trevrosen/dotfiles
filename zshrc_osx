@@ -72,6 +72,10 @@ alias gs="git status"
 alias gpr="git pull --rebase"
 alias gcommit="git commit -a -S"
 
+# -- Containers --
+alias d="docker"
+alias k="kubectl"
+
 # -- MANUAL STEPS --
 ## Source this file in the default .zshrc
 # echo "\n\n# Personal config\nsource ~/.dotfiles/zshrc_osx\n" >> ~/.zshrc
