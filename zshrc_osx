@@ -31,16 +31,16 @@ export GITHUB_USERNAME="trevrosen"
 gohack (){
 	echo "[-] Getting package $1"
 	go get $1
-	cd $GOPATH/src/$1
-	echo "[-] Creating fork environment for $2"
-	git remote rename origin upstream
-	git remote add origin git@github.com:$GITHUB_USERNAME/$2
-	git fetch --all
-	echo "[-] Setting up master"
-	git branch master --set-upstream-to origin/master
-	git checkout master
-	git checkout -b upstream-master --track upstream/master
-	echo "[-] Done!"
+	pushd $GOPATH/src/$1
+		echo "[-] Creating fork environment for $2"
+		git remote rename origin upstream
+		git remote add origin git@github.com:$GITHUB_USERNAME/$2
+		git fetch --all
+		echo "[-] Setting up master"
+		git branch master --set-upstream-to origin/master
+		git checkout master
+		git checkout -b upstream-master --track upstream/master
+		echo "[-] Done!"
 	popd
 }
 
