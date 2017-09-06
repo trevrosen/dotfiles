@@ -8,9 +8,6 @@ export PATH=~/bin/:$PATH
 alias ls="ls -Galh"
 alias l="ls -Glh"
 
-# Show the human-friendly size for every item in the pwd
-alias lssize='du -sck * | sort -n | while read size fname; do for unit in k M G T P E Z Y; do if [ $size -lt 1024 ]; then echo -e "${size}${unit}\t${fname}"; break; fi; size=$((size/1024)); done; done'
-
 # --Swift--
 export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:"${PATH}"
 
@@ -57,12 +54,6 @@ alias pingoo="ping google.com"
 alias scrum="m ~/.scrumlog.txt"
 alias listening="lsof -i -P | grep -i 'listen'"
 
-# --Metasploit stuff--
-alias msfup="cd $HOME/Code/metasploit-framework && git fetch upstream && gc master && git merge upstream/master"
-alias msfconsole_debug="rdebug-ide --port 1234 --dispatcher-port 26162 -- $HOME/Code/metasploit-framework/msfconsole"
-alias mergepr="git merge -S --no-ff --edit"
-alias pushpr="git push upstream upstream-master:master"
-
 # -- Git --
 alias gl="git log --color --graph --decorate"
 alias gp="git push"
@@ -71,6 +62,7 @@ alias gd="git diff"
 alias gs="git status"
 alias gpr="git pull --rebase"
 alias gcommit="git commit -a -S"
+alias gforce="git push --force-with-lease"
 
 # -- Containers --
 alias d="docker"
