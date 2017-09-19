@@ -5,8 +5,8 @@
 
 
 # Nice ls
-alias ls="ls -Galh"
-alias l="ls -Glh"
+alias ls="ls -Galh --colorize=auto"
+alias l="ls -Glh --colorize=auto"
 
 # --Go--
 # Where Ubuntu installs Go
