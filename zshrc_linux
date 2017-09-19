@@ -43,9 +43,9 @@ gohack (){
 gocd () { cd `go list -f '{{.Dir}}' $1` }
 
 # --Editor stuff--
-export EDITOR="mvim"
-export GIT_EDITOR='mvim -f --nomru -c "au VimLeave * !open -a iTerm2"'
-alias m="mvim --remote-silent"
+export EDITOR="gvim"
+export GIT_EDITOR='gvim'
+alias m="gvim --remote-silent"
 
 # --Laziness--
 alias pingoo="ping google.com"
