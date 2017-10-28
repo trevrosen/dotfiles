@@ -2,7 +2,7 @@
 #
 # (macOS only)
 #
-export PATH=~/bin/:$PATH
+export PATH=~/bin:$PATH
 
 # Nice ls
 alias ls="ls -Galh"
@@ -53,6 +53,13 @@ alias m="mvim --remote-silent"
 alias pingoo="ping google.com"
 alias scrum="m ~/.scrumlog.txt"
 alias listening="lsof -i -P | grep -i 'listen'"
+
+# --Metasploit stuff--
+alias msfup="cd $HOME/Code/metasploit-framework && git fetch upstream && gc master && git merge upstream/master"
+alias msfconsole_debug="rdebug-ide --port 1234 --dispatcher-port 26162 -- $HOME/Code/metasploit-framework/msfconsole"
+alias mergepr="git merge -S --no-ff --edit"
+alias pushpr="git push upstream upstream-master:master"
+alias gobot="cd $GOPATH/src/gobot.io/x/gobot"
 
 # -- Git --
 alias gl="git log --color --graph --decorate"
