@@ -67,6 +67,7 @@ alias gforce="git push --force-with-lease"
 
 # -- Containers --
 alias d="docker"
+alias drit="docker run -it"
 alias k="kubectl"
 
 # -- Homebrew-based Python2 --
