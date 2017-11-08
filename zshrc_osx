@@ -54,6 +54,7 @@ alias pingoo="ping google.com"
 alias scrum="m ~/.scrumlog.txt"
 alias listening="lsof -i -P | grep -i 'listen'"
 alias gobot="cd $GOPATH/src/gobot.io/x/gobot"
+alias gohub="cd $GOPATH/src/github.com"
 
 # -- Git --
 alias gl="git log --color --graph --decorate"
