@@ -70,6 +70,7 @@ alias gforce="git push --force-with-lease"
 alias d="docker"
 alias drit="docker run -it"
 alias k="kubectl"
+alias kcon="kubectl config set-context"
 
 # -- Homebrew-based Python2 --
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
