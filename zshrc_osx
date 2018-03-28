@@ -41,6 +41,14 @@ gohack (){
 	popd
 }
 
+# Use netcat to check for a listener on a given host and port
+# $1 - host
+# $2 - port
+# usage: chkport localhost 32769
+chkport (){
+  nc -zv $1 $2
+}
+
 # Easily jump into Go packages
 gocd () { cd `go list -f '{{.Dir}}' $1` }
 
