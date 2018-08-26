@@ -89,6 +89,9 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 #
 ## Ensure aliases work in non-interactive shells like Vim
 # ln -s $HOME/.zshrc $HOME/.zshenv
+#
+# Download iTerm Materials theme from inside this zsh theme:
+# https://github.com/carloscuesta/materialshell/tree/master/shell-color-themes#iterm
 
 
 # -- Zsh working like Vi --
