@@ -3,10 +3,12 @@
 # (macOS only)
 #
 export PATH=~/bin:$PATH
+export PATH=/usr/local/bin:$PATH
 
 # Nice ls
 alias ls="ls -Galh"
 alias l="ls -Glh"
+
 
 # --Swift--
 export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:"${PATH}"
