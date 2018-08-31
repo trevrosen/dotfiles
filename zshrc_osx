@@ -10,7 +10,7 @@ alias ls="ls -Galh"
 alias l="ls -Glh"
 
 # Python3 bins
-export PATH=/Users/trevor/Library/Python/3.7/bin/:$PATH
+export PATH=/Users/trevor/Library/Python/3.7/bin:$PATH
 
 # --Swift--
 export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:"${PATH}"
