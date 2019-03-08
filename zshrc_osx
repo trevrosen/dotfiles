@@ -9,11 +9,17 @@ export PATH=/usr/local/bin:$PATH
 alias ls="ls -Galh"
 alias l="ls -Glh"
 
+# MySQL 5.7 bins
+export PATH=/usr/local/opt/mysql@5.7/bin:$PATH
+
 # Python3 bins
 export PATH=/Users/trevor/Library/Python/3.7/bin:$PATH
 
 # --Swift--
 export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:"${PATH}"
+
+# --Rust--
+export PATH=$HOME/.cargo/bin:$PATH
 
 # --Go--
 export GOPATH=$HOME/LocalCode/go
@@ -78,11 +84,12 @@ alias gpr="git pull --rebase"
 alias gcommit="git commit -a -S"
 alias gforce="git push --force-with-lease"
 
-# -- Containers --
+# -- Containers/Clusters --
 alias d="docker"
 alias drit="docker run -it"
-alias k="kubectl"
-alias kcon="kubectl config set-context"
+alias v="vagrant"
+
+
 
 # -- Homebrew-based Python2 --
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"

@@ -1,0 +1,8 @@
+# This file contains shell customizations for K8s and should be used
+# with a dedicated iTerm2 profile for K8s b/c of the long start time
+# that these commands create.
+
+# -- kubectl setup
+source <(kubectl completion zsh)  # setup autocomplete in zsh into the current shell
+# Kubectl aliases (https://github.com/ahmetb/kubectl-aliases)
+[ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
