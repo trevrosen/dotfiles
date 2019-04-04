@@ -12,8 +12,8 @@ alias l="ls -Glh"
 # MySQL 5.7 bins
 export PATH=/usr/local/opt/mysql@5.7/bin:$PATH
 
-# Python3 bins
-export PATH=/Users/trevor/Library/Python/3.7/bin:$PATH
+# Pyenv-based Python
+eval "$(pyenv init -)"
 
 # --Swift--
 export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:"${PATH}"
@@ -89,10 +89,6 @@ alias d="docker"
 alias drit="docker run -it"
 alias v="vagrant"
 
-
-
-# -- Homebrew-based Python2 --
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 # -- MANUAL STEPS --
 ## Source this file in the default .zshrc
