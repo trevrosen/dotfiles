@@ -24,7 +24,6 @@ export PATH=$HOME/.cargo/bin:$PATH
 # --Go--
 export GOPATH=$HOME/LocalCode/go
 export PATH=$PATH:$GOPATH/bin
-
 export GOROOT=`go env GOROOT` # b/c installed via Homebrew
 export PATH=$PATH:$GOROOT/bin
 
@@ -73,6 +72,7 @@ alias scrum="m ~/.scrumlog.txt"
 alias listening="lsof -i -P | grep -i 'listen'"
 alias gobot="cd $GOPATH/src/gobot.io/x/gobot"
 alias gohub="cd $GOPATH/src/github.com"
+alias tf="terraform"
 
 # -- Git --
 alias gl="git log --color --graph --decorate"
@@ -88,7 +88,6 @@ alias gforce="git push --force-with-lease"
 alias d="docker"
 alias drit="docker run -it"
 alias v="vagrant"
-
 
 # -- MANUAL STEPS --
 ## Source this file in the default .zshrc
