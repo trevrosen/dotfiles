@@ -62,8 +62,9 @@ chkport (){
 gocd () { cd `go list -f '{{.Dir}}' $1` }
 
 # --Editor stuff--
-export EDITOR="mvim"
-export GIT_EDITOR='mvim -f --nomru -c "au VimLeave * !open -a iTerm2"'
+export EDITOR="nvim"
+export GIT_EDITOR="nvim"
+alias n="nvim"
 alias m="mvim --remote-silent"
 
 # --Laziness--
