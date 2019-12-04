@@ -13,10 +13,13 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'kien/ctrlp.vim',
 Plug 'mhartington/oceanic-next'
+Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets',
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
@@ -73,6 +76,22 @@ let NERDTreeShowBookmarks = 1
 "  Code config (autocomplete, etc)
 "
 "
+
+" Trigger ultiSnip with Ctrl-J
+"imap <C-j> <esc>a<Plug>snipMateNextOrTrigger
+let g:UltiSnipsExpandTrigger="<c-j>"
+
+" Set Ruby indentation
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
+
+" SilverSearcher instead of Ack
+if executable('ag')
+  let g:ackprg = 'ag --nogroup --nocolor --column --vimgrep'
+endif
+
+" Configuration for ack-vim
+cnoreabbrev Ack Ack!
+nnoremap <Leader>a :Ack!<Space>
 
 " code completion
 let g:deoplete#enable_at_startup = 1
