@@ -11,13 +11,15 @@ filetype plugin on
 " ----- BEGIN PLUGINS -----
 call plug#begin('~/.vim/plugged')
 
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
-Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-fugitive'
-Plug 'mhartington/oceanic-next'
-Plug 'vim-airline/vim-airline'
+Plug 'airblade/vim-gitgutter'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'mhartington/oceanic-next'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-sensible'
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
 " ----- END PLUGINS -----
@@ -32,6 +34,11 @@ endif
 syntax enable
 colorscheme OceanicNext
 let g:airline_theme='oceanicnext'
+set cursorline
+hi cursorline cterm=none  term=none
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
+
 
 
 "
@@ -59,3 +66,31 @@ endfunction
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeDirArrows = 1
 let NERDTreeShowBookmarks = 1
+
+
+"
+"
+"  Code config (autocomplete, etc)
+"
+"
+
+" code completion
+let g:deoplete#enable_at_startup = 1
+
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+
+" fix imports and format on save
+let g:go_fmt_command = "goimports"
+
+" Turn on nice highlighting for all the things
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_format_strings = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_function_parameters = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_types = 1
