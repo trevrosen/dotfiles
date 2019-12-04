@@ -1,4 +1,9 @@
-" Ergonomics
+"
+"
+" Basic Ergonomics
+"
+"
+"
 imap jk <Esc>
 let mapleader = ","
 set number
