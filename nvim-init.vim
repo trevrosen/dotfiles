@@ -18,7 +18,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'kien/ctrlp.vim',
+Plug 'kien/ctrlp.vim'
 Plug 'mhartington/oceanic-next'
 Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdcommenter'
@@ -26,6 +26,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets',
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
 
@@ -33,7 +34,6 @@ call plug#end()
 " ----- END PLUGINS -----
 
 " --- Material theme setup ---
-" Or if you have Neovim >= 0.1.5
 if (has("termguicolors"))
  set termguicolors
 endif
@@ -42,11 +42,12 @@ endif
 syntax enable
 colorscheme OceanicNext
 let g:airline_theme='oceanicnext'
+
+" Highlight current line incurrent file
 set cursorline
 hi cursorline cterm=none  term=none
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
-
 
 
 "
