@@ -23,12 +23,23 @@ Plug 'mhartington/oceanic-next'
 Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets',
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
+
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'	
+endif
+
+" code completion
+let g:deoplete#enable_at_startup = 1
+
 
 call plug#end()
 " ----- END PLUGINS -----
@@ -41,6 +52,7 @@ endif
 " Theme
 syntax enable
 colorscheme OceanicNext
+set guifont=Menlo:h14.00
 let g:airline_theme='oceanicnext'
 
 " Highlight current line incurrent file
@@ -84,11 +96,18 @@ let NERDTreeShowBookmarks = 1
 "
 
 " Trigger ultiSnip with Ctrl-J
-"imap <C-j> <esc>a<Plug>snipMateNextOrTrigger
 let g:UltiSnipsExpandTrigger="<c-j>"
 
 " Set Ruby indentation
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
+
+" On pressing tab, insert 2 spaces
+set expandtab
+" show existing tab with 2 spaces width
+set tabstop=2
+set softtabstop=2
+" when indenting with '>', use 2 spaces width
+set shiftwidth=2
 
 " SilverSearcher instead of Ack
 if executable('ag')
@@ -98,9 +117,6 @@ endif
 " Configuration for ack-vim
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
-
-" code completion
-let g:deoplete#enable_at_startup = 1
 
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'

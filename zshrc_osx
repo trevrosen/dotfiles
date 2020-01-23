@@ -33,14 +33,14 @@ export PATH=$PATH:$GOROOT/bin
 # $2 - the name of the package in the fork, e.g. "hugo"
 #
 # usage: gohack github.com/pressly/goose goose
-export GITHUB_USERNAME="trevrosen"
+export GHUSER="trevrosen"
 gohack (){
 	echo "[-] Getting package $1"
 	go get $1
 	pushd $GOPATH/src/$1
 		echo "[-] Creating fork environment for $2"
 		git remote rename origin upstream
-		git remote add origin git@github.com:$GITHUB_USERNAME/$2
+		git remote add origin git@github.com:$GHUSER/$2
 		git fetch --all
 		echo "[-] Setting up master"
 		git branch master --set-upstream-to origin/master
@@ -65,6 +65,7 @@ gocd () { cd `go list -f '{{.Dir}}' $1` }
 export EDITOR="nvim"
 export GIT_EDITOR="nvim"
 alias n="nvim"
+alias v="nvim"
 alias m="mvim --remote-silent"
 
 # --Laziness--
@@ -88,7 +89,6 @@ alias gforce="git push --force-with-lease"
 # -- Containers/Clusters --
 alias d="docker"
 alias drit="docker run -it"
-alias v="vagrant"
 
 # -- MANUAL STEPS --
 ## Source this file in the default .zshrc
