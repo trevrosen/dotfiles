@@ -31,6 +31,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
+Plug 'junegunn/vim-easy-align'
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -46,6 +47,14 @@ let g:deoplete#enable_at_startup = 1
 
 call plug#end()
 " ----- END PLUGINS -----
+
+" vim-easy-align
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
 
 " --- Material theme setup ---
 if (has("termguicolors"))
