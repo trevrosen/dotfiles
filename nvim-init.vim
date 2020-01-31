@@ -13,6 +13,9 @@ nnoremap <F6> :w<CR>
 nnoremap <Leader>f :NERDTreeToggle<Enter>
 filetype plugin on
 
+" Use system Python3 location
+let g:python3_host_prog = "/usr/bin/python3"
+
 " ----- BEGIN PLUGINS -----
 call plug#begin('~/.vim/plugged')
 
@@ -52,7 +55,15 @@ endif
 " Theme
 syntax enable
 colorscheme OceanicNext
-set guifont=Menlo:h14.00
+
+if has("gui_running")
+  if has("gui_macvim")
+    set guifont=Menlo\ Bold:h14
+  else
+    set guifont=Menlo:h14.00
+  endif
+endif
+
 let g:airline_theme='oceanicnext'
 
 " Highlight current line incurrent file

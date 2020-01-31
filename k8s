@@ -6,3 +6,8 @@
 source <(kubectl completion zsh)  # setup autocomplete in zsh into the current shell
 # Kubectl aliases (https://github.com/ahmetb/kubectl-aliases)
 [ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
+
+alias flux=fluxctl
+
+# Pretty much always true
+export FLUX_FORWARD_NAMESPACE=flux
