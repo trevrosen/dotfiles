@@ -32,6 +32,7 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
 Plug 'junegunn/vim-easy-align'
+Plugin 'kchmck/vim-coffee-script' " B/C at the moment Hubot needs CoffeeScript
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -47,6 +48,10 @@ let g:deoplete#enable_at_startup = 1
 
 call plug#end()
 " ----- END PLUGINS -----
+
+if !has('nvim')
+  set directory=~/.vim/swapfiles//
+endif
 
 " vim-easy-align
 " Start interactive EasyAlign in visual mode (e.g. vipga)
