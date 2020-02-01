@@ -14,7 +14,7 @@ nnoremap <Leader>f :NERDTreeToggle<Enter>
 filetype plugin on
 
 " Use system Python3 location
-let g:python3_host_prog = "/usr/bin/python3"
+let g:python3_host_prog = "/usr/local/bin/python3"
 
 " ----- BEGIN PLUGINS -----
 call plug#begin('~/.vim/plugged')
