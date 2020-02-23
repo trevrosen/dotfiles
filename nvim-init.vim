@@ -32,7 +32,7 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
 Plug 'junegunn/vim-easy-align'
-Plugin 'kchmck/vim-coffee-script' " B/C at the moment Hubot needs CoffeeScript
+Plug 'kchmck/vim-coffee-script' " B/C at the moment Hubot needs CoffeeScript
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -71,11 +71,7 @@ syntax enable
 colorscheme OceanicNext
 
 if has("gui_running")
-  if has("gui_macvim")
-    set guifont=Menlo\ Bold:h14
-  else
-    set guifont=Menlo:h14.00
-  endif
+  set guifont=Menlo:h14.00
 endif
 
 let g:airline_theme='oceanicnext'
