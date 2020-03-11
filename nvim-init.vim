@@ -32,18 +32,17 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
 Plug 'junegunn/vim-easy-align'
-Plug 'kchmck/vim-coffee-script' " B/C at the moment Hubot needs CoffeeScript
+Plug 'hashivim/vim-terraform'
 
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
+if !has('nvim')
   Plug 'Shougo/deoplete.nvim'
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'	
-endif
-
+  "
 " code completion
 let g:deoplete#enable_at_startup = 1
+endif
+
 
 
 call plug#end()
