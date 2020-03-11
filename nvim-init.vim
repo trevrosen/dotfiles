@@ -70,7 +70,7 @@ syntax enable
 colorscheme OceanicNext
 
 if has("gui_running")
-  set guifont=Menlo:h14.00
+  set guifont=Menlo\ Bold:h14
 endif
 
 let g:airline_theme='oceanicnext'
