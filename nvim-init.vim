@@ -33,6 +33,7 @@ Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
 Plug 'junegunn/vim-easy-align'
 Plug 'hashivim/vim-terraform'
+Plug 'tsandall/vim-rego'
 
 if !has('nvim')
   Plug 'Shougo/deoplete.nvim'
@@ -155,3 +156,10 @@ let g:go_highlight_function_parameters = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_types = 1
+
+
+"
+" Terraform
+"
+let g:terraform_fmt_on_save=1
+
