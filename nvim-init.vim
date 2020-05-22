@@ -34,6 +34,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'junegunn/vim-easy-align'
 Plug 'hashivim/vim-terraform'
 Plug 'tsandall/vim-rego'
+Plug 'dense-analysis/ale'
+Plug 'Yggdroot/indentLine'
+Plug 'pedrohdz/vim-yaml-folds'
 
 if !has('nvim')
   Plug 'Shougo/deoplete.nvim'
@@ -162,4 +165,22 @@ let g:go_highlight_types = 1
 " Terraform
 "
 let g:terraform_fmt_on_save=1
+
+"
+" YAML
+"
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+let g:indentLine_char = '⦙'
+set foldlevelstart=20
+
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'
+let g:ale_lint_on_text_changed = 'never'
+set foldlevelstart=20
+
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'
+let g:ale_lint_on_text_changed = 'never'
 
