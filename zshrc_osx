@@ -24,6 +24,9 @@ export PATH=$PATH:$GOPATH/bin
 export GOROOT=`go env GOROOT` # b/c installed via Homebrew
 export PATH=$PATH:$GOROOT/bin
 
+# --Pip bins--
+export PATH=$HOME/.local/bin:$PATH
+
 # Set up a Go project for contribution.
 # Gets around issues related to intra-package import paths.
 # $1 - the origin of the package, e.g. "github.com/spf13/hugo"
