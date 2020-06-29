@@ -184,3 +184,18 @@ let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '⚠'
 let g:ale_lint_on_text_changed = 'never'
 
+"
+" Terminal colors
+"
+
+" Taken from Oceanic Material theme used in iTerm
+let g:terminal_ansi_colors = [
+ 	\ '#313131', '#6f8184',
+ 	\ '#ff6a64', '#ff5d4e',
+ 	\ '#cddc38', '#cddc38',
+ 	\ '#ffdc50', '#ffca43',
+ 	\ '#4acfff', '#4fb5f7',
+ 	\ '#ff5c93', '#e13573',
+ 	\ '#00fcff', '#00b9cc',
+ 	\ '#f7f7f7', '#f7f7f7',
+ 	\]
