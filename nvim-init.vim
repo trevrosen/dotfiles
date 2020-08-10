@@ -189,11 +189,13 @@ let g:ale_lint_on_text_changed = 'never'
 "
 
 " Taken from Oceanic Material theme used in iTerm
+" NOTE: not entirely correct yet, but close enough for the :term not to be
+" terrible
 let g:terminal_ansi_colors = [
  	\ '#313131', '#6f8184',
  	\ '#cddc38', '#cddc38',
  	\ '#ff6a64', '#ff5d4e',
- 	\ '#ff5c93', '#e13573',
+ 	\ '#ff5c93', '#e13573', 
 	\ '#4acfff', '#4fb5f7',
  	\ '#ffdc50', '#ffca43',
  	\ '#00fcff', '#00b9cc',
