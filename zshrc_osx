@@ -27,6 +27,9 @@ export PATH=$PATH:$GOROOT/bin
 # --Pip bins--
 export PATH=$HOME/.local/bin:$PATH
 
+# --Python 3--
+alias python=/usr/local/bin/python3
+
 # -- AWS --
 export AWS_SDK_LOAD_CONFIG=1
 
