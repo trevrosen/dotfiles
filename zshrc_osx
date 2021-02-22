@@ -19,7 +19,7 @@ export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:"${PA
 export PATH=$HOME/.cargo/bin:$PATH
 
 # --Go--
-export GOPATH=$HOME/LocalCode/go
+export GOPATH=$HOME/c/go
 export PATH=$PATH:$GOPATH/bin
 export GOROOT=`go env GOROOT` # b/c installed via Homebrew
 export PATH=$PATH:$GOROOT/bin
@@ -78,7 +78,6 @@ alias m="mvim --remote-silent"
 alias pingoo="ping google.com"
 alias scrum="m ~/.scrumlog.txt"
 alias listening="lsof -i -P | grep -i 'listen'"
-alias gobot="cd $GOPATH/src/gobot.io/x/gobot"
 alias gohub="cd $GOPATH/src/github.com"
 alias tf="terraform"
 

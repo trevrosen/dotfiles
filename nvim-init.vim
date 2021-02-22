@@ -17,15 +17,14 @@ filetype plugin on
 let g:python3_host_prog = "/usr/local/bin/python3"
 
 " ----- BEGIN PLUGINS -----
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.vim/autoload/')
 
 Plug 'airblade/vim-gitgutter'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'kien/ctrlp.vim'
 Plug 'mhartington/oceanic-next'
 Plug 'mileszs/ack.vim'
-Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdcommenter'
+Plug 'preservim/nerdtree'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets',
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
@@ -39,9 +38,8 @@ Plug 'Yggdroot/indentLine'
 Plug 'pedrohdz/vim-yaml-folds'
 
 if !has('nvim')
-  Plug 'Shougo/deoplete.nvim'
+  Plug 'ncm2/ncm2'
   Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'	
   "
 " code completion
 let g:deoplete#enable_at_startup = 1
@@ -74,7 +72,7 @@ syntax enable
 colorscheme OceanicNext
 
 if has("gui_running")
-  set guifont=Menlo\ Bold:h14
+  set guifont=Menlo:h14
 endif
 
 let g:airline_theme='oceanicnext'
