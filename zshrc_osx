@@ -94,6 +94,7 @@ alias gforce="git push --force-with-lease"
 # -- Containers/Clusters --
 alias d="docker"
 alias drit="docker run -it"
+alias k="kubectl"
 
 # -- MANUAL STEPS --
 ## Source this file in the default .zshrc
@@ -109,6 +110,8 @@ alias drit="docker run -it"
 # -- Zsh working like Vi --
 # ((remember to set up the vi-mode in the plugins line in ~/.zshrc))
 # ctrl-r starts searching history backward
+# Vi mode
+bindkey -v
 bindkey '^r' history-incremental-search-backward
 
 # Drop the timeout for switching between modes
