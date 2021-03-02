@@ -37,6 +37,7 @@ Plug 'dense-analysis/ale'
 Plug 'Yggdroot/indentLine'
 Plug 'pedrohdz/vim-yaml-folds'
 Plug 'earthly/earthly'
+Plug 'hashivim/vim-vagrant'
 
 if !has('nvim')
   Plug 'ncm2/ncm2'
