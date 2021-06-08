@@ -33,6 +33,12 @@ alias python=/usr/local/bin/python3
 # -- AWS --
 export AWS_SDK_LOAD_CONFIG=1
 
+# -- GCloud --
+# Path
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+# Completions
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+
 # Set up a Go project for contribution.
 # Gets around issues related to intra-package import paths.
 # $1 - the origin of the package, e.g. "github.com/spf13/hugo"
@@ -93,8 +99,13 @@ alias gforce="git push --force-with-lease"
 
 # -- Containers/Clusters --
 alias d="docker"
+alias drmc="docker ps --filter status=exited -q | xargs docker rm"
+alias dregistry="docker run -d -p 5000:5000 --restart=always --name registry registry:2"
 alias drit="docker run -it"
 alias k="kubectl"
+
+# ko default to local repo 
+export KO_DOCKER_REPO=localhost:5000
 
 # -- MANUAL STEPS --
 ## Source this file in the default .zshrc
