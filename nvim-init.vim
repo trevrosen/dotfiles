@@ -11,7 +11,6 @@ set number
 " Cmd-S to save (make sure to map in iTerm via keyboard shortcut mapped to escape sequence "[17~")
 nnoremap <F6> :w<CR>
 nnoremap <Leader>f :NERDTreeToggle<Enter>
-filetype plugin on
 
 " Use system Python3 location
 let g:python3_host_prog = "/usr/local/bin/python3"
@@ -38,6 +37,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'pedrohdz/vim-yaml-folds'
 Plug 'earthly/earthly'
 Plug 'hashivim/vim-vagrant'
+Plug 'rust-lang/rust.vim'
 
 if !has('nvim')
   Plug 'ncm2/ncm2'
@@ -50,6 +50,8 @@ endif
 
 
 call plug#end()
+
+filetype plugin indent on
 " ----- END PLUGINS -----
 
 if !has('nvim')
@@ -70,6 +72,7 @@ if (has("termguicolors"))
 endif
 
 " Theme
+
 syntax enable
 colorscheme OceanicNext
 
