@@ -2,18 +2,10 @@
 #
 # (macOS only)
 #
-export PATH=~/bin:$PATH
-export PATH=/usr/local/bin:$PATH
 
 # Nice ls
 alias ls="ls -Galh"
 alias l="ls -Glh"
-
-# MySQL 5.7 bins
-export PATH=/usr/local/opt/mysql@5.7/bin:$PATH
-
-# --Swift--
-export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:"${PATH}"
 
 # --Rust--
 export PATH=$HOME/.cargo/bin:$PATH
@@ -29,6 +21,7 @@ export PATH=$HOME/.local/bin:$PATH
 
 # --Python 3--
 alias python=/usr/local/bin/python3
+alias pip=/usr/local/bin/pip3
 
 # -- AWS --
 export AWS_SDK_LOAD_CONFIG=1
@@ -128,3 +121,5 @@ bindkey '^r' history-incremental-search-backward
 # Drop the timeout for switching between modes
 export KEYTIMEOUT=1
 
+export PATH=~/bin:$PATH
+export PATH=/usr/local/bin:$PATH
