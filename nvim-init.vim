@@ -46,10 +46,8 @@ if !has('nvim')
 " code completion
 let g:deoplete#enable_at_startup = 1
 endif
-
-
-
 call plug#end()
+
 
 filetype plugin indent on
 " ----- END PLUGINS -----
@@ -162,12 +160,6 @@ let g:go_highlight_function_parameters = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_types = 1
-
-
-"
-" Terraform
-"
-let g:terraform_fmt_on_save=1
 
 "
 " YAML
