@@ -55,10 +55,10 @@ gohack (){
 		git remote rename origin upstream
 		git remote add origin git@github.com:$GHUSER/$2
 		git fetch --all
-		echo "[-] Setting up master"
-		git branch master --set-upstream-to origin/master
-		git checkout master
-		git checkout -b upstream-master --track upstream/master
+		echo "[-] Setting up main"
+		git branch main --set-upstream-to origin/main
+		git checkout main
+		git checkout -b upstream-main --track upstream/main
 		echo "[-] Done!"
 	popd
 }
