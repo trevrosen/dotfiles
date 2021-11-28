@@ -41,11 +41,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # Set up a Go project for contribution.
-# Gets around issues related to intra-package import paths.
 # $1 - the origin of the package, e.g. "github.com/spf13/hugo"
 # $2 - the name of the package in the fork, e.g. "hugo"
 #
-# usage: gohack github.com/pressly/goose goose
+# usage: gohack github.com/sigstore/cosign cosign
 export GHUSER="trevrosen"
 gohack (){
 	echo "[-] Getting package $1"
