@@ -84,7 +84,7 @@ alias m="mvim --remote-silent"
 alias pingoo="ping google.com"
 alias scrum="m ~/.scrumlog.txt"
 alias listening="lsof -i -P | grep -i 'listen'"
-alias gohub="cd $GOPATH/src/github.com"
+alias gohub="cd ~/c/github.com"
 alias codehub="cd ~/c/github.com"
 alias tf="terraform"
 
