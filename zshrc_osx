@@ -99,7 +99,7 @@ alias gcommit="git commit -a -S"
 alias gforce="git push --force-with-lease"
 
 # -- Containers/Clusters --
-alias docker="podman"
+#alias docker="podman"
 alias d="docker"
 alias drmc="docker ps --filter status=exited -q | xargs docker rm"
 alias dregistry="docker run -d -p 5000:5000 --restart=always --name registry registry:2"
