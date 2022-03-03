@@ -112,6 +112,9 @@ export ORAS_CACHE=~/.oras/cache
 # ko default to local repo 
 export KO_DOCKER_REPO=localhost:5000
 
+# OpenSSL from Homebrew
+alias brewssl="/opt/homebrew/opt/openssl@3/bin/openssl"
+
 # -- MANUAL STEPS --
 ## Source this file in the default .zshrc
 # echo "\n\n# Personal config\nsource ~/.dotfiles/zshrc_osx\n" >> ~/.zshrc
