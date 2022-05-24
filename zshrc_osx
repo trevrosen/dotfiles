@@ -81,7 +81,7 @@ alias v="nvim"
 alias m="mvim --remote-silent"
 
 # --Laziness--
-alias pingoo="ping google.com"
+alias pingoo="ping 8.8.8.8"
 alias scrum="m ~/.scrumlog.txt"
 alias listening="lsof -i -P | grep -i 'listen'"
 alias gohub="cd ~/c/github.com"
