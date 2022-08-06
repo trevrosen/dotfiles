@@ -12,6 +12,7 @@ export PATH=/usr/local/bin:$PATH
 
 # --Rust--
 export PATH=$HOME/.cargo/bin:$PATH
+source $HOME/.cargo/env
 
 # --Go--
 export GOPATH=$HOME/c/go
@@ -28,12 +29,6 @@ alias pip=/usr/local/bin/pip3
 
 # -- AWS --
 export AWS_SDK_LOAD_CONFIG=1
-
-# -- GCloud --
-# Path
-source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
-# Completions
-source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
 
 # -- Nvm --
 export NVM_DIR="$HOME/.nvm"
