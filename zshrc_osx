@@ -91,7 +91,7 @@ alias gc="git checkout"
 alias gd="git diff"
 alias gs="git status"
 alias gpr="git pull --rebase"
-alias gcommit="git commit -a"
+alias gcommit="git commit -a -s"
 alias gforce="git push --force-with-lease"
 
 # -- Containers/Clusters --
