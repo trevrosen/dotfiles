@@ -23,10 +23,6 @@ export PATH=$PATH:$GOROOT/bin
 # --Pip bins--
 export PATH=$HOME/.local/bin:$PATH
 
-# --Python 3--
-alias python=/usr/local/bin/python3
-alias pip=/usr/local/bin/pip3
-
 # -- AWS --
 export AWS_SDK_LOAD_CONFIG=1
 
@@ -82,7 +78,8 @@ alias listening="lsof -i -P | grep -i 'listen'"
 alias gohub="cd ~/c/github.com"
 alias codehub="cd ~/c/github.com"
 alias tf="terraform"
-alias fast="networkQuality -v" # like fast.com
+alias fast="networkQuality -v"   # like fast.com
+alias update="softwareupdate -l" # update all software
 
 # -- Git --
 alias gl="git log --color --graph --decorate"
