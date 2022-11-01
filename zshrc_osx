@@ -116,7 +116,7 @@ alias brewssl="/opt/homebrew/opt/openssl@3/bin/openssl"
 # ln -s $HOME/.zshrc $HOME/.zshenv
 #
 # Download iTerm Materials theme from inside this zsh theme:
-# https://github.com/carloscuesta/materialshell/tree/master/shell-color-themes#iterm
+# https://github.com/trevrosen/materialshell/tree/master/shell-color-themes#iterm
 
 
 # -- Zsh working like Vi --
