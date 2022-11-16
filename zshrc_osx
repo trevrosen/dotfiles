@@ -128,7 +128,7 @@ export KEYTIMEOUT=1
 # Install materialshell-oceanic.itermcolors from this repo into iTerm
 #
 ## -- Make key repeating not suck --
-# defaults write -g InitialKeyRepeat -int 10
+# defaults write -g InitialKeyRepeat -int 12
 # defaults write -g KeyRepeat -int 3
 
 
