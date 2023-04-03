@@ -108,6 +108,9 @@ export KO_DOCKER_REPO=localhost:5000
 # OpenSSL from Homebrew
 alias brewssl="/opt/homebrew/opt/openssl@3/bin/openssl"
 
+# VSCode Insiders
+alias inside="code-insiders"
+
 # -- Zsh working like Vi --
 # ((remember to set up the vi-mode in the plugins line in ~/.zshrc))
 # ctrl-r starts searching history backward
