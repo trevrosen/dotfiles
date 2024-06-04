@@ -40,6 +40,7 @@ Plug 'pedrohdz/vim-yaml-folds'
 Plug 'earthly/earthly'
 Plug 'hashivim/vim-vagrant'
 Plug 'rust-lang/rust.vim'
+Plug 'fatih/vim-go'
 
 if !has('nvim')
   Plug 'ncm2/ncm2'

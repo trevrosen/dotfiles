@@ -80,6 +80,8 @@ alias codehub="cd ~/c/github.com"
 alias tf="terraform"
 alias fast="networkQuality -v"   # like fast.com
 alias update="softwareupdate -l" # update all software
+alias pip="pip3"
+alias python="python3"
 
 # -- Git --
 alias gl="git log --color --graph --decorate"
