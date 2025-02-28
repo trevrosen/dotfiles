@@ -20,6 +20,9 @@ export PATH=$PATH:$GOPATH/bin
 export GOROOT=`go env GOROOT` # b/c installed via Homebrew
 export PATH=$PATH:$GOROOT/bin
 
+# --Ruby--
+eval "$(rbenv init -)"
+
 # --Pip bins--
 export PATH=$HOME/.local/bin:$PATH
 
@@ -99,7 +102,7 @@ alias d="docker"
 alias drmc="docker ps --filter status=exited -q | xargs docker rm"
 alias dregistry="docker run -d -p 5000:5000 --restart=always --name registry registry:2"
 alias drit="docker run -it"
-alias k="kubectl"
+alias k="minikube kubectl --"
 
 # oras config - https://oras.land/
 export ORAS_CACHE=~/.oras/cache
