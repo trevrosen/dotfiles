@@ -137,7 +137,11 @@ bindkey '^r' history-incremental-search-backward
 # Drop the timeout for switching between modes
 export KEYTIMEOUT=1
 
-source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+
+# Source AI environment toolkit from https://github.com/trevrosen/ai-env
+if [[ -f "$HOME/c/github.com/trevrosen/ai-env" ]]; then source "$HOME/c/github.com/trevrosen/ai-env/zsh-functions.sh"; fi
+
 
 # -- MANUAL STEPS --
 ## Source this file in the default .zshrc
