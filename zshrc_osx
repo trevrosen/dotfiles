@@ -56,6 +56,11 @@ gohack (){
 	popd
 }
 
+function seecert () {
+  nslookup $1
+  (openssl s_client -showcerts -servername $1 -connect $1:443 <<< "Q" | openssl x509 -text | grep -iA2 "Validity")
+}
+
 # Use netcat to check for a listener on a given host and port
 # $1 - host
 # $2 - port
@@ -118,6 +123,9 @@ alias inside="code-insiders"
 
 # Activate local Python venv
 alias venva=". .venv/bin/activate"
+
+# Ruby
+eval "$(rbenv init - zsh)"
 
 # -- Zsh working like Vi --
 # ((remember to set up the vi-mode in the plugins line in ~/.zshrc))
