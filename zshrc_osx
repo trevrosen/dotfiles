@@ -69,6 +69,21 @@ chkport (){
   nc -zv $1 $2
 }
 
+# Munge Obsidian MD tables to cleanly paste into GitHub fields
+fixObsidianTable() {
+  perl -CSDA -0pe '
+    s/\r\n?/\n/g;
+    s/[\x{FEFF}\x{200B}-\x{200D}\x{2060}]//g;
+    s/\x{00A0}/ /g;
+    s/%%.*?%%//gs;
+    s/!\[\[([^]|]+)(?:\|([^\]]+))?\]\]/defined $2 ? $2 : $1/ge;
+    s/\[\[([^]|]+)\|([^\]]+)\]\]/$2/g;
+    s/\[\[([^\]]+)\]\]/$1/g;
+    s/ \^[A-Za-z0-9-]+\h*$//mg;
+    1 while s/^(\h*\|[^\n]*\|\h*)\n\h*\n(?=\h*\|)/$1\n/mg;
+  '
+}
+
 # Easily jump into Go packages
 gocd () { cd `go list -f '{{.Dir}}' $1` }
 
@@ -142,6 +157,9 @@ source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.z
 # Source AI environment toolkit from https://github.com/trevrosen/ai-env
 if [[ -f "$HOME/c/github.com/trevrosen/ai-env" ]]; then source "$HOME/c/github.com/trevrosen/ai-env/zsh-functions.sh"; fi
 
+
+# VSCode shell integration
+[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
 
 # -- MANUAL STEPS --
 ## Source this file in the default .zshrc
