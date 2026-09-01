@@ -84,6 +84,37 @@ fixObsidianTable() {
   '
 }
 
+# Convert Markdown to Slack formatting
+md2slack() {
+  perl -pe '
+    if (/^\s*```/) { $fenced = !$fenced; next }
+    next if $fenced;
+
+    # Headings become bold.
+    s/^#{1,6}[ \t]+(.+?)[ \t]*#*[ \t]*$/*$1*/;
+
+    # Preserve indentation for unordered and ordered lists.
+    s/^([ \t]*)[-+*][ \t]+/$1• /;
+    s/^([ \t]*)(\d+)[.)][ \t]+/$1$2. /;
+
+    # Markdown links become Slack links.
+    s/\[([^\]]+)\]\(([^)]+)\)/<$2|$1>/g;
+
+    # Protect inline code from formatting conversions.
+    @parts = split(/(`+[^`]*`+)/, $_, -1);
+
+    for ($i = 0; $i < @parts; $i += 2) {
+      # Italics must be converted before bold.
+      $parts[$i] =~ s/(?<!\*)\*(?!\*)(\S(?:.*?\S)?)(?<!\*)\*(?!\*)/_$1_/g;
+      $parts[$i] =~ s/\*\*(\S(?:.*?\S)?)\*\*/*$1*/g;
+      $parts[$i] =~ s/~~(\S(?:.*?\S)?)~~/~$1~/g;
+      $parts[$i] =~ s/==(\S(?:.*?\S)?)==/*$1*/g;
+    }
+
+    $_ = join("", @parts);
+  '
+}
+
 # Easily jump into Go packages
 gocd () { cd `go list -f '{{.Dir}}' $1` }
 
